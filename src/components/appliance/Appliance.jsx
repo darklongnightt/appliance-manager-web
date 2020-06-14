@@ -4,7 +4,6 @@ import RemoveAppliance from './RemoveAppliance';
 import M from "materialize-css";
 
 const Appliance = (props) => {
-    console.log(props)
     const { appliance, update, remove } = props
     const editId = `edit${appliance.id}`
     const removeId = `remove${appliance.id}`

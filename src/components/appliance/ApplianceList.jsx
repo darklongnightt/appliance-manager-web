@@ -87,7 +87,9 @@ const ApplianceList = () => {
 
     return (
         <div className="container">
-            <Filter appliances={appliances} filter={filter} />
+            {filteredAppliances.length > 0 && (
+                <Filter appliances={appliances} filter={filter} />
+            )}
 
             <ul className="collection with-header">
                 <li className="collection-header">

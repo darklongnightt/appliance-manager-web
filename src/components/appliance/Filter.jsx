@@ -16,13 +16,10 @@ const Filter = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log('search: ', search)
-        console.log('type: ', type)
 
         const updatedAppliances = appliances.filter(item => {
             return item[type].toUpperCase().includes(search.toUpperCase())
         })
-        console.log(updatedAppliances)
         filter(updatedAppliances)
     }
 
