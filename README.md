@@ -1,7 +1,7 @@
 A ReactJS web app created to manage your home appliances:
 Searchable list of all recorded appliances
 
-1. Can be filtered using the provided search filters
+1. Can be filtered using the provided search filters:
 - Serial Number
 - Brand
 - Model
