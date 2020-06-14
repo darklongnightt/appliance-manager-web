@@ -87,7 +87,7 @@ const ApplianceList = () => {
 
     return (
         <div className="container">
-            {filteredAppliances.length > 0 && (
+            {appliances.length > 0 && (
                 <Filter appliances={appliances} filter={filter} />
             )}
 
