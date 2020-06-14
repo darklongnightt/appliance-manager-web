@@ -22,7 +22,9 @@ A ReactJS web app created to manage your home appliances with the following feat
 6. UI properly viewable in any devices (mobile, desktop, tablet, etc.)
 
 Backend Host: https://xavier-capgemini.herokuapp.com
+
 Backend Repo: https://github.com/darklongnightt/appliance-manager/tree/master/src/main/java/com/capgemini/interview
 
 Frontend Host: https://xavier-capgemini-web.herokuapp.com
+
 Frontend Repo: https://github.com/darklongnightt/appliance-manager-web
