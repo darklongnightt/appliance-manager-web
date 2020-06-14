@@ -26,4 +26,3 @@ Backend Repo: https://github.com/darklongnightt/appliance-manager/tree/master/sr
 
 Frontend Host: https://xavier-capgemini-web.herokuapp.com
 Frontend Repo: https://github.com/darklongnightt/appliance-manager-web
-====================================================================================================================
