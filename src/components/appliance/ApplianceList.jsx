@@ -89,12 +89,6 @@ const ApplianceList = () => {
         })
     }
 
-    if (loading) {
-        return (
-            <Preloader />
-        )
-    }
-
     return (
         <div className="container">
             {appliances.length > 0 && (
