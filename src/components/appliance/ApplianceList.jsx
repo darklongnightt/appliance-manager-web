@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import M from "materialize-css";
 import { getAllAppliances, createAppliance, updateAppliance, deleteAppliance } from '../../utils/Endpoints';
 import Appliance from './Appliance';
 import CreateAppliance from './CreateAppliance';
-import M from "materialize-css";
 import Filter from './Filter';
+import Preloader from '../layout/Preloader';
 
 const ApplianceList = () => {
     const [appliances, setAppliances] = useState([])
+    const [loading, setLoading] = useState(true)
     const [filteredAppliances, setFilteredAppliances] = useState([])
 
     useEffect(() => {
@@ -39,8 +41,10 @@ const ApplianceList = () => {
         getAllAppliances().then(resp => {
             setAppliances(resp.data)
             setFilteredAppliances(resp.data)
+            setLoading(false)
         }).catch(err => {
             showError(err)
+            setLoading(false)
         })
     }
 
@@ -51,7 +55,7 @@ const ApplianceList = () => {
             setAppliances(updatedAppliances)
             setFilteredAppliances(updatedAppliances)
             closeModals()
-            M.toast({html: 'Successfully created appliance entry!'})
+            M.toast({ html: 'Successfully created appliance entry!' })
         }).catch(err => {
             showError(err)
         })
@@ -66,7 +70,7 @@ const ApplianceList = () => {
             setAppliances(updatedAppliances)
             setFilteredAppliances(updatedAppliances)
             closeModals()
-            M.toast({html: 'Successfully updated appliance entry!'})
+            M.toast({ html: 'Successfully updated appliance entry!' })
         }).catch(err => {
             showError(err)
         })
@@ -79,10 +83,16 @@ const ApplianceList = () => {
             })
             setAppliances(updatedAppliances)
             setFilteredAppliances(updatedAppliances)
-            M.toast({html: 'Successfully removed appliance entry!'})
+            M.toast({ html: 'Successfully removed appliance entry!' })
         }).catch(err => {
             showError(err)
         })
+    }
+
+    if (loading) {
+        return (
+            <Preloader />
+        )
     }
 
     return (
